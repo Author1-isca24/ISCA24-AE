@@ -15,7 +15,8 @@ The algorithm to determine the minimum number of VNs will complete in two minute
 ## Software dependencies
 - Linux distribution (e.g. Ubuntu 20.04)
 - Python 3.8 or higher
-- Networkx 2.5.1 (Python package)
+- Networkx 2.6.3 (Python package)
+- matplotlib 3.4.3 (Python package)
 - CMurphi 5.4.9.1
 
 ## CMurphi setup
@@ -26,6 +27,7 @@ git clone https://github.com/Errare-humanum-est/CMurphi.git
 To install CMuprhi run from the parent directory:
 ```
 cd src && make
+mkdir ErrorTrace
 ```
 
 ## Datasets
