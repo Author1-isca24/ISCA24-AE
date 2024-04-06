@@ -113,12 +113,12 @@ for file in "${copied_files[@]}"; do
 
         if [[ $max_seconds -gt 0 ]]; then
             # timeout "${max_seconds}" ./"${base_name}.o" -d ErrorTrace -tv -pr -p5 -m 50000 &> "${SOURCE_DIR}/${base_name}_result.txt"
-            timeout "${max_seconds}" ./"${base_name}.o" -d ErrorTrace -maxl180 -tv -pr -p5 -m 2000 &> "${base_name}_result.txt"
+            timeout "${max_seconds}" ./"${base_name}.o" -d ErrorTrace -maxl180 -tv -pr -p5 -m 80000 &> "${base_name}_result.txt"
             if [ $? -eq 124 ]; then
                 echo "Timeout: ${base_name}.o exceeded the time limit of ${duration_days} days."
             fi
         else
-            ./"${base_name}.o" -d ErrorTrace -maxl180 -tv -pr -p5 -m 50000 &> "${base_name}_result.txt"
+            ./"${base_name}.o" -d ErrorTrace -maxl180 -tv -pr -p5 -m 80000 &> "${base_name}_result.txt"
         fi
     
         mv "${base_name}_result.txt" "${CURRENT_DIR}/${SOURCE_DIR}/${base_name}_result.txt"
